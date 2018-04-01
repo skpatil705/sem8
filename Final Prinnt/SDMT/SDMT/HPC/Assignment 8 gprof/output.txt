@@ -1,0 +1,39 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+ no time accumulated
+
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+  0.00      0.00     0.00        5     0.00     0.00  quicksort(int*, int, int)
+  0.00      0.00     0.00        2     0.00     0.00  partition(int*, int, int)
+  0.00      0.00     0.00        1     0.00     0.00  _GLOBAL__sub_I_n
+  0.00      0.00     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+
+			Call graph
+
+
+granularity: each sample hit covers 2 byte(s) no time propagated
+
+index % time    self  children    called     name
+                0.00    0.00       1/5           main [6]
+                0.00    0.00       4/5           _GLOBAL__sub_I_n [10]
+[8]      0.0    0.00    0.00       5         quicksort(int*, int, int) [8]
+                0.00    0.00       2/2           partition(int*, int, int) [9]
+-----------------------------------------------
+                0.00    0.00       2/2           quicksort(int*, int, int) [8]
+[9]      0.0    0.00    0.00       2         partition(int*, int, int) [9]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [17]
+[10]     0.0    0.00    0.00       1         _GLOBAL__sub_I_n [10]
+                0.00    0.00       4/5           quicksort(int*, int, int) [8]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [11]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I_n [10]
+[11]     0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [11]
+-----------------------------------------------
+
+Index by function name
+
+  [10] _GLOBAL__sub_I_n        [9] partition(int*, int, int)
+  [11] __static_initialization_and_destruction_0(int, int) [8] quicksort(int*, int, int)

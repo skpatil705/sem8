@@ -1,0 +1,31 @@
+<html>
+<head>
+<title> Booth's Multiplication </title>
+</head>
+<script type="text/javascript">
+	function ClearFields(){
+		document.getElementById('num1').value=" ";
+		document.getElementById('num2').value=" ";
+		document.getElementById('bit').value=" ";
+
+
+	}
+
+</script>
+<body>
+<center><form action="calculate.jsp">
+	<br><br>
+	Enter two numbers to multiply:<br><br>
+	<input  name="num1" id="num1"/><br><br>
+	<input  name="num2" id="num2"/><br><br>
+
+	Enter number of bits:<br><br>
+	<input type="bit" name="bit" id="bit"><br><br>
+
+	<input type="submit" name="submit" value="Multiply"><br><br>	
+</form></center>
+<CENTER>
+<button onclick="ClearFields()">Clear</button><br><br>
+</CENTER>
+</body>
+</html>
